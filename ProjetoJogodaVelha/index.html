@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-btr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <section id="menu">
+            <h1 onclick="Test()">Jogo da Velha</h1>
+            <button type="button" id="play-button" onclick="ChoseMode()">Iniciar</button>
+            <button type="button" id="play-mode1" onclick="ShowSignInPlayersMode1()">P1 X P2</button>
+            <button type="button" id="play-mode2" onclick=" ShowSignInPlayersMode2()">P1 X CPU</button>
+
+            <form id="form">
+                <label for="">Jogador 1:</label>
+                <input type="text" id="player1-input" placeholder="Expl.: Ana" maxlength="15">
+                <label for="" id="player-label2">Jogador 2:</label>
+                <input type="text" id="player2-input" placeholder="Expl.: Gabriel" maxlength="15">
+                <button type="button" id="sign-in-players" onclick="SignInPlayers()">Cadastrar</button>
+            </form>
+        </section>
+
+        <section id="names">
+            <section id="score">                    
+                <p id="player1-name">name 1</p>
+                <span id="player1-score">0</span>
+            </section>
+
+            <span id="x">X</span>
+            <section id="score">
+                <p id="player2-name">name 2</p>
+                    <span id="player2-score">0</span>
+                </section>
+            </section>
+
+        <section id="board">
+            <div id="p1" class="game-pos" onclick="Play(1)"></div>
+            <div id="p2" class="game-pos" onclick="Play(2)"></div>
+            <div id="p3" class="game-pos" onclick="Play(3)"></div>
+            <div id="p4" class="game-pos" onclick="Play(4)"></div>
+            <div id="p5" class="game-pos" onclick="Play(5)"></div>
+            <div id="p6" class="game-pos" onclick="Play(6)"></div>
+            <div id="p7" class="game-pos" onclick="Play(7)"></div>
+            <div id="p8" class="game-pos" onclick="Play(8)"></div>
+            <div id="p9" class="game-pos" onclick="Play(9)"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <script src="CPUMode.js"></script>
+</body>
+
+</html>
