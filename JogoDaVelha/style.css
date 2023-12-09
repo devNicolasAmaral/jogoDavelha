@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --darkGray: #12122b;
+    --lightGray: #aaaa91;
+    --winning-blocks: #16163d;
+    --drawing-blocks: #9e5a5a;
+}
+
+body{
+    color: var(--lightGray);
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.cadPlayer, .cadPlayerX, .cadPlayerO{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+}
+
+.cadPlayer label{
+    font-size: 1.5rem;
+    margin-bottom: .2rem;
+}
+
+.cadPlayer input{
+    padding: .4rem;
+    margin-bottom: 1.3rem;
+    border-radius: .250rem;
+}
+
+.cadPlayerX{
+    left: 10%;
+}
+
+.cadPlayerO{
+    right:10%;
+}
+
+.container{
+    padding: 2.5rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--darkGray);
+}
+
+#gameboard{
+    width: 28.1rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2.5;
+}
+
+.box{
+    height: 9.3rem;
+    width: 9.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--lightGray);
+    font-size: 7.5rem;
+    border-right: .125rem solid;
+    border-bottom: .125rem solid;   
+}
+
+.box:nth-child(3n){
+    border-right: none;
+}
+
+.box:nth-child(6) ~ .box{
+    border-bottom: none;
+}
+
+button{
+    padding: .625rem 1.25rem;
+    margin-bottom: 2rem;
+    border-radius: .625rem;
+    background-color: var(--lightGray);
+    color: #333;
+    border-color: var(--lightGray);
+    font-size: 1.125rem;
+}
+
+button:hover{
+    cursor: pointer;
+    transform: translateY(-.125rem);
+}
