@@ -1,0 +1,1 @@
+playerO_Point = document.getElementById("playerO_Point");
